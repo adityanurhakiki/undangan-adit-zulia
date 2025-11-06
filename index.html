@@ -82,75 +82,10 @@
 </head>
 <body>
 
-<!-- === Musik Romantis === -->
-<audio id="weddingMusic" loop preload="auto">
-  <source src="https://drive.google.com/uc?export=download&id=1-YYe0Up5jswbTyC7Tosstz-93isMR92U" type="audio/mpeg">
+<!-- Musik romantis -->
+<audio autoplay loop>
+  <source src="https://www.mfiles.co.uk/mp3-downloads/romantic-piano.mp3" type="audio/mpeg">
 </audio>
-
-<!-- Tombol Musik -->
-<button id="musicBtn" aria-label="Musik" title="Putar musik"></button>
-
-<style>
-  /* Tombol Musik Elegan */
-  #musicBtn {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    width: 55px;
-    height: 55px;
-    border: none;
-    border-radius: 50%;
-    background: rgba(255, 182, 193, 0.8);
-    box-shadow: 0 0 15px rgba(255, 182, 193, 0.8);
-    cursor: pointer;
-    backdrop-filter: blur(4px);
-    z-index: 9999;
-    background-image: url('https://cdn-icons-png.flaticon.com/512/727/727240.png');
-    background-size: 65%;
-    background-repeat: no-repeat;
-    background-position: center;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-  }
-  #musicBtn.playing {
-    background-color: rgba(255, 105, 180, 0.9);
-    background-image: url('https://cdn-icons-png.flaticon.com/512/727/727245.png');
-    animation: pulse 1.5s infinite;
-  }
-  @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.08); }
-    100% { transform: scale(1); }
-  }
-</style>
-
-<script>
-  const music = document.getElementById("weddingMusic");
-  const btn = document.getElementById("musicBtn");
-
-  // Tombol diklik -> toggle play/pause
-  btn.addEventListener("click", () => {
-    if (music.paused) {
-      music.play();
-      btn.classList.add("playing");
-    } else {
-      music.pause();
-      btn.classList.remove("playing");
-    }
-  });
-
-  // Aktifkan otomatis jika user scroll (setelah gesture terdeteksi)
-  let scrolled = false;
-  window.addEventListener("scroll", () => {
-    if (!scrolled) {
-      scrolled = true;
-      music.play().then(() => {
-        btn.classList.add("playing");
-      }).catch(() => {
-        // jika gagal autoplay, tetap diam (browser block)
-      });
-    }
-  });
-</script>
 
 <!-- Animasi bunga lembut -->
 <script>
@@ -304,6 +239,7 @@ function tampilNotif(notif) {
 </body>
 
 </html>
+
 
 
 
