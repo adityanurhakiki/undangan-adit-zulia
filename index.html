@@ -215,7 +215,8 @@ function tampilNotif(notif) {
 }
 </script>
 
-  <script src="https://giscus.app/client.js"
+  <!-- Giscus Comment Section -->
+<script src="https://giscus.app/client.js"
         data-repo="adityanurhakiki/undangan-adit-zulia"
         data-repo-id="R_kgDOQQiywg"
         data-category="General"
@@ -230,6 +231,33 @@ function tampilNotif(notif) {
         crossorigin="anonymous"
         async>
 </script>
+
+<!-- Tambahkan CSS agar tampilan Giscus lebih rapi -->
+<style>
+/* Pusatkan area komentar dan teks di dalam Giscus */
+.giscus, .giscus-frame {
+  display: flex !important;
+  justify-content: center !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+}
+
+/* Atur agar tulisan "0 komentar" tidak terlalu ke kiri */
+.giscus span, .giscus p, .giscus div {
+  text-align: center !important;
+}
+
+/* Pastikan frame komentar menyesuaikan lebar kontainer */
+iframe.giscus-frame {
+  margin: 0 auto !important;
+  display: block !important;
+  width: 90% !important;
+  max-width: 600px !important;
+  border: none !important;
+}
+</style>
 <footer>
   Dengan penuh cinta,<br>
   💖 Aditya & Zulia 💖
