@@ -82,18 +82,9 @@
 </head>
 <body>
 
-<!-- Musik romantis --><audio id="bgm" preload="auto" loop>
+onclick="document.querySelector('audio').play()"><!-- Musik romantis --><audio id="bgm" autoplay loop>
   <source src="https://www.mfiles.co.uk/mp3-downloads/romantic-piano.mp3" type="audio/mpeg">
-</audio><script>
-  // Jalankan musik ketika pengguna pertama kali scroll
-  let started = false;
-  window.addEventListener('scroll', function() {
-    if (!started) {
-      document.getElementById('bgm').play().catch(()=>{});
-      started = true;
-    }
-  });
-</script>
+</audio>
 
 <!-- Animasi bunga lembut -->
 <script>
@@ -247,6 +238,7 @@ function tampilNotif(notif) {
 </body>
 
 </html>
+
 
 
 
